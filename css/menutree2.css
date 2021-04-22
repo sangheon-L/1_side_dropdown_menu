@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.menu_tree_management{
+  border: 1px solid #ff6a67;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-top: 10px;
+  background: #ff6a67;
+}
+
+.menu_tree_management .title{
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.menu_tree_management input[type=checkbox]{
+  display: none;
+}
+
+.menu_tree_management input[type=checkbox] + label{
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  height: 19px;
+  line-height: 19px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.menu_tree_management input[type=checkbox] + label:before{
+  content:'';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 0;
+  top: 0;
+  background: url('../img/menu_tree_icon_plus.png');
+}
+
+
+
+.menu_tree_management input[type=checkbox]:checked + label:before{
+  background: url('../img/menu_tree_icon_minus.png');
+}
+
+
+
+
+
+/*서브메뉴 노출*/
+
+.menu_tree_management input[type=checkbox] + label ~ *{
+  display: none;
+}
+
+.menu_tree_management input[type=checkbox]:checked + label ~ *{
+  display: block;
+}
+
+
+.menu_tree_management input[type=checkbox]:checked + label{
+  color: #000000;
+
+}
+
+
+
+.menu_tree_management .table_ctn .menu_tree > ul > li{
+  margin-bottom: 30px;
+}
+
+.menu_tree_management .table_ctn .menu_tree > ul > li:last-child{
+  margin-bottom: 0;
+}
+
+.menu_tree_management .table_ctn .menu_tree .sub_menu{
+  margin-left: 30px;
+
+  /* text-indent: 30px; */
+  /*margin left해도 되고 텍스트 인덴트로 들여스기해도*/
+
+  margin-top: 25px;
+}
+
+
+
+.menu_tree_management .table_ctn .menu_tree .sub_menu > li{
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.menu_tree_management .table_ctn .menu_tree .sub_menu > li:before{
+  content: "L";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
